@@ -23,7 +23,7 @@ public class User {
     @Column(name = "email")
     private String email;
     @Column(name = "age")
-    private int age;
+    private String age;
     @Column(name = "question")
     private String question;
 
@@ -60,11 +60,11 @@ public class User {
         this.email = email;
     }
 
-    public int getAge() {
+    public String getAge() {
         return this.age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
