@@ -27,12 +27,11 @@ public class UserController {
         //model attribute for form data
         User user = new User();
         model.addAttribute("user", user);
-        return "new_user";
+        return "addNewUserFaq";
    }
    @PostMapping("/saveUserFaq")
    public String SaveFaq(@ModelAttribute("user") User user){
         //save user data to db
-
         userService.saveUser(user);
         return "redirect:/";
    }

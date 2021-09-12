@@ -7,16 +7,31 @@
     </head>
     <body>
         <div class="container">
-            <h1>User FAQ Add Form</h1>
-            <form action="#" th:action="@{/saveUserFaq}" th:object = "user", method="POST">
-                <input type="text" th:feild = "*{firstname}" placeholder="User First Name" class="form-control mb-4 col-md-4">
-                <input type="text" th:feild = "*{lastname}" placeholder="User Last Name" class="form-control mb-4 col-md-4">
-                <input type="text" th:feild = "*{email}" placeholder="User Email" class="form-control mb-4 col-md-4">
-                <input type="text" th:feild = "*{age}" placeholder="User Age" class="form-control mb-4 col-md-4">
-                <input type="text" th:feild = "*{question}" placeholder="User Question" class="form-control mb-4 col-md-4">
-
+            <h1 align="center">User Frequently Asked Questions</h1>
+            <h3 align="center">User Frequently Asked Questions Add Form</h3>
+            <form action="#" th:action="@{/saveUserFaq}" th:object = "${user}" method="POST">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">First Name</label>
+                    <input  class="form-control" type="text" th:field = "*{firstname}" placeholder="Enter First Name" id="exampleFormControlInput1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput2">Last Name</label>
+                    <input  class="form-control" type="text" th:field = "*{lastname}" placeholder="Enter First Name" id="exampleFormControlInput2">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput3">Email address</label>
+                  <input  class="form-control" type="text" th:field = "*{email}" placeholder="Enter First Name" id="exampleFormControlInput3">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput4">Age</label>
+                    <input  class="form-control" type="text" th:field = "*{age}" placeholder="Enter First Name" id="exampleFormControlInput4">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Frequently Asked Question</label>
+                  <textarea type="text" th:field = "*{question}" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
                 <button type="submit" class="btn btn-info col-2">Save Your FAQ</button>
-            </form>
+            </form>  
         </div>
     </body>
 </html>
